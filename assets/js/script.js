@@ -92,15 +92,17 @@ function contactPage() {
 $("a").on("click", function(e){
     e.preventDefault();
     let id = e.target.id;
-    console.log(id);
+    if(id == "takeMeHome"){
+        id = "home"
+    }
 
-    if (id != "home" || id != "about") {
-        $("#home").attr("class", "navbar-item");
+    if (id == "home") {
+        $("#contact").attr("class", "navbar-item");
         $("#about").attr("class", "navbar-item");
     }
-    else if (id != "home" || id != "contact") {
+    else if (id != "contact") {
         $("#home").attr("class", "navbar-item");
-        $("#contact").attr("class", "navbar-item");
+        $("#about").attr("class", "navbar-item");
     }
     else {
         $("#about").attr("class", "navbar-item");
