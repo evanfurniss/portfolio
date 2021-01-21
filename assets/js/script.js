@@ -43,7 +43,7 @@ function createPortfolioImage () {
         let div = $("<div>").attr({
             class: "container"
         })
-        let head = $("<h1>").text(portfolioExamples[i].header).attr("class", "subtitle");
+        let head = $("<h1>").text(portfolioExamples[i].header).attr("class", "title");
         let image = $("<img>").attr({
             class: "image is-480x480",
             src: portfolioExamples[i].src
