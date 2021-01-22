@@ -1,5 +1,11 @@
 let portfolioExamples = [
     {
+        src: "assets/images/drumKit.gif",
+        header: "Desktop Drum Kit",
+        description: "Enjoy creating drum patterns from the Roland TR-909 drum machine in a desktop. A desktop drum kit that uses a computer keyboard. Feel inspired by searching for a song that pulls up the lyrics of the song and a gif with a related search name.",
+        href: "https://willheyer.github.io/DrumKitProject/"
+    },
+    {
         src: "assets/images/first.png",
         header: "Workday Planner",
         description: "A work day planner that updates the present hour. Using color variation, hourly textboxes to enter time sensitive information, and storing user information locally, this daily planner helps you keep track of your busy day. Created using JQuery, JavaScript, HTML, and CSS, this work day planner is simple and efficient.",
@@ -16,6 +22,12 @@ let portfolioExamples = [
         header: "Weather App",
         description: "This dynamically created weather app allows the user to search for a city in the world and display the current weather and a five day forecast. The users past searches will remain so long as the local storage is not clear. Using JavaScript, JQuery, and Bootstrap, the weather app allows users to scope out their future outings.",
         href: "https://evanfurniss.github.io/weather-app/"
+    },
+    {
+        src: "assets/images/example.gif",
+        header: "Quiz Game",
+        description: "Created using JavaScript DOM, this quiz creates a dynamically created HTML page. The quiz uses the createElement, append, and prepend. The quiz asks the user to test their knowledge of the video game Halo: Combat Evolved. I hope you try it out below!",
+        href: "https://evanfurniss.github.io/code-quiz/"
     }
 ]
 
@@ -28,7 +40,7 @@ function onLoad() {
     else if ($("#about").hasClass("is-active")){
         aboutMe();
     }
-    else {
+    else if ($("#contact").hasClass("is-active")){
         contactPage();
     }
 }
@@ -45,7 +57,7 @@ function createPortfolioImage () {
         })
         let head = $("<h1>").text(portfolioExamples[i].header).attr("class", "title");
         let image = $("<img>").attr({
-            class: "image is-480x480",
+            class: "image",
             src: portfolioExamples[i].src
         });
         let description = $("<p>").text(portfolioExamples[i].description).attr("class", "is-medium");
@@ -100,12 +112,12 @@ $("a").on("click", function(e){
         $("#contact").attr("class", "navbar-item");
         $("#about").attr("class", "navbar-item");
     }
-    else if (id != "contact") {
+    else if (id == "contact") {
         $("#home").attr("class", "navbar-item");
         $("#about").attr("class", "navbar-item");
     }
-    else {
-        $("#about").attr("class", "navbar-item");
+    else if (id == "about") {
+        $("#home").attr("class", "navbar-item");
         $("#contact").attr("class", "navbar-item");
     }
 
