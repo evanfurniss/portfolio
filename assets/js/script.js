@@ -102,7 +102,7 @@ function contactPage() {
     $("#sectionTitle").append(title);
 }
 
-$("a").on("click", function(e){
+$(".navbar-item").on("click", function(e){
     e.preventDefault();
     let id = e.target.id;
     if(id == "takeMeHome"){
