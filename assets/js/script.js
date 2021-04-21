@@ -1,5 +1,29 @@
 let portfolioExamples = [
     {
+        src: "FF1.png",
+        header: "Fantasy Football Team Builder",
+        description: "The Fantasy Football Team Builder app is a web application designed for users to create, update, and maintain their fantasy football teams. Using a MERN stack, auth0, Mongoose, and the Fantasy Football API, the sleek and responsive design is easy to use.",
+        href: "https://stormy-reaches-02847.herokuapp.com/"
+    },
+    {
+        src: "assets/images/horse-manager.png",
+        header: "Horse Manager",
+        description: "Using Express-Handlebars, MySQL, and Express.js, the Horse Manager app is currently being used in a facility that holds and manages over 60 horses. The application was designed to assist in the day to day maintenance of horses, track their feeding, medication, and other horse upkeep.",
+        href: "https://whispering-inlet-04022.herokuapp.com/"
+    },
+    {
+        src: "react-directory.png",
+        header: "React Directory",
+        description: "A directory that allows users to search a list of employees in an organization. Users are able to search for users' names, emails, telephone numbers, or if any part of the search matches any part of employee information, and sort the list by alpabetical order by email. Easy to use with a sleek design, user experience is the most important for the design.",
+        href: "https://evanfurniss.github.io/react-directory/"
+    },
+    {
+        src: "assets/images/employee-tracker.png",
+        header: "Employee Tracker",
+        description: "A Node.js employee tracker that utilizes the users terminal to add employees, give new employees a job title, department, and manager name if applicaple. If an employee is removed from the organization, the administrator then has the option to remove that person from the list of employees.",
+        href:"https://github.com/evanfurniss/employee-tracker"
+    },
+    {
         src: "assets/images/drumKit.gif",
         header: "Desktop Drum Kit",
         description: "Enjoy creating drum patterns from the Roland TR-909 drum machine in a desktop. A desktop drum kit that uses a computer keyboard. Feel inspired by searching for a song that pulls up the lyrics of the song and a gif with a related search name.",
@@ -16,12 +40,6 @@ let portfolioExamples = [
         header: "Random Password Generator",
         description: "The random password generator creates a random string of characters; lowercase letters, uppercase letters, numbers, and symbols. The user is able to choose which characters they would like to use, how many characters they would like it to be, and will correct you if you are outside the parameters set in place. I hope will check out my password generator below!",
         href: "https://evanfurniss.github.io/password-generator/"
-    },
-    {
-        src: "assets/images/img2.png",
-        header: "Weather App",
-        description: "This dynamically created weather app allows the user to search for a city in the world and display the current weather and a five day forecast. The users past searches will remain so long as the local storage is not clear. Using JavaScript, JQuery, and Bootstrap, the weather app allows users to scope out their future outings.",
-        href: "https://evanfurniss.github.io/weather-app/"
     },
     {
         src: "assets/images/example.gif",
@@ -99,7 +117,8 @@ function contactPage() {
     $("#sectionTitle").empty();
 
     let title = "Contact";
-    $("#sectionTitle").append(title);
+    let gitHub = $("<h1>").text(`<a href="${github.com/evanfurniss}" target="_blank">GitHub</a>`)
+    $("#sectionTitle").append(title, gitHub);
 }
 
 $(".navbar-item").on("click", function(e){
