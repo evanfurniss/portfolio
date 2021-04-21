@@ -1,6 +1,6 @@
 let portfolioExamples = [
     {
-        src: "FF1.png",
+        src: "assets/images/FF1.png",
         header: "Fantasy Football Team Builder",
         description: "The Fantasy Football Team Builder app is a web application designed for users to create, update, and maintain their fantasy football teams. Using a MERN stack, auth0, Mongoose, and the Fantasy Football API, the sleek and responsive design is easy to use.",
         href: "https://stormy-reaches-02847.herokuapp.com/"
@@ -12,7 +12,7 @@ let portfolioExamples = [
         href: "https://whispering-inlet-04022.herokuapp.com/"
     },
     {
-        src: "react-directory.png",
+        src: "assets/images/react-directory.png",
         header: "React Directory",
         description: "A directory that allows users to search a list of employees in an organization. Users are able to search for users' names, emails, telephone numbers, or if any part of the search matches any part of employee information, and sort the list by alpabetical order by email. Easy to use with a sleek design, user experience is the most important for the design.",
         href: "https://evanfurniss.github.io/react-directory/"
